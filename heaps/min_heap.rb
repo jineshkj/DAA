@@ -25,7 +25,7 @@ class MinHeap
 
 private
   def bubble_up(i)
-    return if parentof(i) == -1
+    return unless parentof(i)
 
     if @items[parentof(i)] > @items[i]
       swap_items(i, parentof(i))

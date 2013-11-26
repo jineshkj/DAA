@@ -1,7 +1,7 @@
 
 module HeapOperations
   def parentof(i)
-    (i == 0) ? -1 : (i-1)/2
+    (i == 0) ? nil : (i-1)/2
   end
   
   def youngchildof(i)

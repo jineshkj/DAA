@@ -14,8 +14,13 @@ h = MinHeap.new
 end
 
 report = Benchmark.measure do
+  prev = nil
   while i = h.pop_min
-#    puts i
+    if prev and prev > i
+      puts "Error in sorting..."
+      break
+    end
+    prev = i
   end
 end
 
